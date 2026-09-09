@@ -263,28 +263,16 @@ p {
    ========================================= */
 
 .publication {
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    gap: 30px;
-
-    padding: 30px 0;
-
+    padding: 32px 0;
     border-top: 1px solid #dedede;
 }
 
-.publication:last-child {
+.publication:last-of-type {
     border-bottom: 1px solid #dedede;
 }
 
-.publication-year {
-    font-size: 13px;
-    font-weight: 600;
-    color: #888;
-    padding-top: 5px;
-}
-
 .publication-details h3 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .publication-details h3 a {
@@ -298,14 +286,29 @@ p {
 .authors {
     font-size: 14px !important;
     color: #555 !important;
-    margin-bottom: 7px !important;
+    margin-bottom: 0 !important;
 }
 
 .venue {
     font-size: 14px !important;
-    color: #888 !important;
-    margin-bottom: 0 !important;
+    color: #777 !important;
+    margin-bottom: 7px !important;
     font-style: italic;
+}
+
+.scholar-link {
+    margin-top: 35px;
+}
+
+.scholar-link a {
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #999;
+    padding-bottom: 3px;
+}
+
+.scholar-link a:hover {
+    opacity: 0.55;
 }
 
 
