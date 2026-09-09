@@ -1,0 +1,495 @@
+/* =========================================
+   General
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    color: #252525;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+
+/* =========================================
+   Navigation
+   ========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e8e8e8;
+    backdrop-filter: blur(10px);
+}
+
+.nav-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nav-name {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #111;
+}
+
+
+/* =========================================
+   Hero
+   ========================================= */
+
+.hero {
+    min-height: 82vh;
+
+    display: flex;
+    align-items: center;
+
+    background: #f7f7f5;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 100px 30px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: #777;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+}
+
+.affiliation {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hero-links {
+    margin-top: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+
+    background: #252525;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: background 0.2s ease;
+}
+
+.button:hover {
+    background: #444;
+}
+
+.text-link {
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #999;
+    padding-bottom: 3px;
+}
+
+
+/* =========================================
+   Sections
+   ========================================= */
+
+.section {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    padding: 110px 30px;
+
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 70px;
+}
+
+.section-alt {
+    max-width: none;
+    padding-left: max(30px, calc((100% - 1180px) / 2 + 30px));
+    padding-right: max(30px, calc((100% - 1180px) / 2 + 30px));
+
+    background: #f7f7f5;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #888;
+
+    padding-top: 10px;
+}
+
+.section-content {
+    max-width: 800px;
+}
+
+.section-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+
+    margin-bottom: 30px;
+}
+
+.section-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.section-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+.large-text {
+    font-size: 20px !important;
+    color: #333 !important;
+    line-height: 1.65;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin-bottom: 45px;
+}
+
+
+/* =========================================
+   Research interests
+   ========================================= */
+
+.research-interests {
+    margin-top: 55px;
+    padding-top: 35px;
+    border-top: 1px solid #ddd;
+}
+
+.research-interests h3 {
+    margin-bottom: 20px;
+}
+
+.interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interest-list span {
+    padding: 8px 14px;
+    border: 1px solid #d5d5d5;
+
+    font-size: 13px;
+    color: #555;
+}
+
+
+/* =========================================
+   Publications
+   ========================================= */
+
+.publication {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 30px;
+
+    padding: 30px 0;
+
+    border-top: 1px solid #dedede;
+}
+
+.publication:last-child {
+    border-bottom: 1px solid #dedede;
+}
+
+.publication-year {
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    padding-top: 5px;
+}
+
+.publication-details h3 {
+    margin-bottom: 12px;
+}
+
+.publication-details h3 a {
+    transition: opacity 0.2s ease;
+}
+
+.publication-details h3 a:hover {
+    opacity: 0.55;
+}
+
+.authors {
+    font-size: 14px !important;
+    color: #555 !important;
+    margin-bottom: 7px !important;
+}
+
+.venue {
+    font-size: 14px !important;
+    color: #888 !important;
+    margin-bottom: 0 !important;
+    font-style: italic;
+}
+
+
+/* =========================================
+   Experience
+   ========================================= */
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 30px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid #dedede;
+}
+
+.timeline-item:last-child {
+    border-bottom: 1px solid #dedede;
+}
+
+.timeline-year {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+}
+
+.timeline-item h3 {
+    margin-bottom: 7px;
+}
+
+.timeline-item p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   Education
+   ========================================= */
+
+.education-item {
+    padding: 28px 0;
+    border-top: 1px solid #dedede;
+}
+
+.education-item:last-child {
+    border-bottom: 1px solid #dedede;
+}
+
+.education-degree {
+    font-size: 18px !important;
+    font-weight: 600;
+    color: #333 !important;
+    margin-bottom: 5px !important;
+}
+
+.education-item p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   Contact
+   ========================================= */
+
+.contact-section {
+    padding-bottom: 130px;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin-top: 35px;
+}
+
+.contact-links a {
+    font-size: 15px;
+    font-weight: 500;
+
+    padding-bottom: 4px;
+    border-bottom: 1px solid #999;
+
+    transition: opacity 0.2s ease;
+}
+
+.contact-links a:hover {
+    opacity: 0.55;
+}
+
+
+/* =========================================
+   Footer
+   ========================================= */
+
+footer {
+    padding: 30px;
+
+    border-top: 1px solid #e5e5e5;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    font-size: 12px;
+    color: #888;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        padding: 16px 20px;
+    }
+
+    .nav-name {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+    .section,
+    .section-alt {
+        display: block;
+
+        padding: 75px 20px;
+    }
+
+    .section-label {
+        margin-bottom: 25px;
+    }
+
+    .section-content h2 {
+        font-size: 34px;
+    }
+
+    .large-text {
+        font-size: 18px !important;
+    }
+
+    .publication {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .publication-year {
+        padding-top: 0;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    footer {
+        display: block;
+        padding: 25px 20px;
+    }
+
+    footer p {
+        margin-bottom: 5px;
+    }
+}
